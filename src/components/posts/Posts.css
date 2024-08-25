@@ -1,0 +1,97 @@
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.posts-filter {
+  display: flex;
+  justify-content: end;
+}
+
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.post {
+  background-color: aqua;
+  height: 300px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 2fr 4fr 1fr;
+  gap: 8px 0px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.post__id,
+.post__title {
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.post__body {
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(153, 153, 153, 1) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  overflow: hidden;
+}
+
+.post__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+.post__icon-like {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.icon-like {
+  color: gray;
+  width: 24px;
+  height: 24px;
+  &:hover {
+    color: red;
+  }
+}
+
+.icon-like-liked {
+  color: red;
+  width: 24px;
+  height: 24px;
+}
+
+.post__icon-delete {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.trash-icon {
+  color: red;
+  width: 24px;
+  height: 24px;
+}
+
+.download-btn {
+  background-color: rgb(20, 4, 59);
+  padding: 18px 18px;
+  border-radius: 8px;
+  color: whitesmoke;
+  font-size: 24px;
+}
